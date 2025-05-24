@@ -30,13 +30,14 @@
       </a>
     </div>
 
-  <form name="rsvp" method="POST" data-netlify="true" action="/thank-you.html">
+  <form name="rsvp" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/thank-you.html">
     <input type="hidden" name="form-name" value="rsvp" />
 
     <input type="text" name="name" placeholder="Your Name" required />
     <input type="email" name="email" placeholder="Your Email" required />
     <input type="number" name="guests" placeholder="Number of Guests" required />
     <textarea name="message" placeholder="Message (optional)"></textarea>
+    <div data-netlify-recaptcha="true"></div>
     <button type="submit">Send RSVP</button>
   </form>
 
