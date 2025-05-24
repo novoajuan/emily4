@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emily's Magical 4th Birthday</title>
+
+  <!-- Google Font for Elegant Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Video Container -->
+  <div class="video-container" id="video-wrapper">
+    <!-- The video element will be injected here dynamically by script.js -->
+  </div>
+
+  <!-- Main Content (Initially hidden, appears after video ends) -->
+  <div id="content">
+    <div class="invite-header">
+      <h1>You're Invited to Emily's Birthday Party!</h1>
+      <p><strong>Date:</strong> Saturday, June 14, 2025<br/>
+         <strong>Time:</strong> 3:30 PM – 6:00 PM<br/>
+         <strong>Location:</strong> The Elizabeth Party Room<br/>
+         4601 N Park Ave, Chevy Chase, MD 20815
+      </p>
+      <a href="https://www.amazon.com/hz/wishlist/ls/123G8XRSY7UIL?ref_=wl_share" target="_blank">
+        View Emily's Wish List
+      </a>
+    </div>
+
+    <form id="rsvp-form" name="rsvp" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="number" name="guests" placeholder="Number of Guests" required />
+      <textarea name="message" placeholder="Message (optional)"></textarea>
+      <button type="submit">Send RSVP</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
