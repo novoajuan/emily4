@@ -30,15 +30,16 @@
       </a>
     </div>
 
-    <form name="rsvp" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="number" name="guests" placeholder="Number of Guests" required />
-      <textarea name="message" placeholder="Message (optional)"></textarea>
-      <button type="submit">Send RSVP</button>
-      <input type="hidden" name="form-name" value="rsvp" />
-    </form>
-  </div>
+  <form name="rsvp" method="POST" data-netlify="true">
+    <!-- 🔒 Hidden input so Netlify can identify this form -->
+    <input type="hidden" name="form-name" value="rsvp" />
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="number" name="guests" placeholder="Number of Guests" required />
+    <textarea name="message" placeholder="Message (optional)"></textarea>
+    <button type="submit">Send RSVP</button>
+  </form>
 
   <script src="script.js"></script>
 </body>
