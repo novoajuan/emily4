@@ -1,4 +1,3 @@
-<!-- thank-you.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +7,30 @@
     body {
       font-family: Georgia, serif;
       text-align: center;
-      padding: 100px;
+      padding: 100px 20px;
       background-color: #fffef9;
       color: #5a6c4d;
     }
-    a {
-      color: #8a6bbf;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .wishlist-link img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .wishlist-link img:hover {
+      transform: scale(1.05);
+    }
+
+    .wishlist-link {
+      display: inline-block;
       text-decoration: none;
     }
   </style>
@@ -21,6 +38,9 @@
 <body>
   <h1>🎉 Thank you for RSVPing!</h1>
   <p>We’re excited to celebrate Emily’s birthday with you.</p>
-  <p><a href="/">← Back to invitation</a></p>
+
+  <a href="https://www.amazon.com/hz/wishlist/ls/123G8XRSY7UIL?ref_=wl_share" target="_blank" class="wishlist-link">
+    <img src="wishlist.png" alt="View Amazon Wish List">
+  </a>
 </body>
 </html>
