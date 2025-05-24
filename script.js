@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const content = document.getElementById('content');
   const videoWrapper = document.getElementById('video-wrapper');
 
-  const isPortrait = window.innerHeight > window.innerWidth;
-  const videoSrc = isPortrait ? "UnicornRideVert.mp4" : "UnicornRideHori.mp4";
+  // Lock in the orientation at page load
+  const initialIsPortrait = window.innerHeight > window.innerWidth;
+  const videoSrc = initialIsPortrait ? "UnicornRideVert.mp4" : "UnicornRideHori.mp4";
 
   const video = document.createElement('video');
   video.id = 'intro-video';
@@ -54,11 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   tryPlay();
 
   video.onended = () => {
-  videoWrapper.style.opacity = "0";
-  setTimeout(() => {
     videoWrapper.style.display = "none";
     content.classList.add('visible');
-  }, 1000); // match fade-out duration
-};
-
+  };
 });
